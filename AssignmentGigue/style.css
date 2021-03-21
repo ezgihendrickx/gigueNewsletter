@@ -23,12 +23,13 @@ html {
 }
 body {
   margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
   /*=16px as default (first statement is fallback)*/
   font-size: 16px;
   font-size: 1.6rem;
   text-align: center;
   max-width: 900px;
-
 }
 
 /* .container {
@@ -37,49 +38,94 @@ body {
 		grid-template-columns: 20% 50% 29%;
 } */
 
+a {
+    text-decoration: none;
+  }
+  
+
 /* Navigation */
 nav {
   width: 100%;
   background-color: aquamarine;
+  padding: 0px;
+
 }
 nav ul {
   list-style: none;
-  display: inline;
-
+  margin: 0;
+  padding: 0;
   display: inline-block;
+
 }
 nav li {
   display: inline;
+  padding: 10px;
 }
+.mainNav{
+    display:grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    box-shadow:0px 2px 2px red;
+    margin-bottom: 4px;
+}
+.mainNav li{
+    border-right-style:solid;
+    border-right-width: 1px;
+    border-right-color:red;
+}
+/* .icon{
+    background: url('your-image-url.jpg');
+    height: 100%;
+    display: inline;
+} */
 
 /* Main Newsletter (excluding top nav)*/
-main{
-    max-width: 600px; /* 600px nexsletter + 300px whitespace */
-    margin:0 auto;
+main {
+  max-width: 600px; /* 600px nexsletter + 300px whitespace */
+  margin: 0 auto;
 }
 
 /* Top Aside info */
 #topAside {
-  background-color:bisque;
+  background-color: bisque;
+  vertical-align: middle;
 }
 
 /* Newsletter sections */
-.section{
-
+.section {
 }
 .highlight {
-    background-color: burlywood;
+  background-color: burlywood;
 }
 
 .section.singleColumn {
-    background-color:cadetblue;
+  background-color: cadetblue;
 }
 
 .section.doubleColumn {
-    background-color:cornsilk;
+  background-color: cornsilk;
 }
 
-.blockImage{
-    display:block;
-    margin: 0 auto;
+.blockImage {
+  display: block;
+  margin: 0 auto;
 }
+
+hr {
+  width: 20%;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: darkgrey;
+}
+
+footer ul {
+  list-style: none;
+  display: inline;
+}
+
+footer li {
+  display: inline;
+}
+
