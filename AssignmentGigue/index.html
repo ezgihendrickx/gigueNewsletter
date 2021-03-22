@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newsletter GIGUE</title>
-    <link rel="stylesheet" href="Style.css" />
+    <title>Newsletter Gigue</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <meta property="og:title" content="Gigue Spring/Summer '21 Newsletter" />
+    <meta property="og:description" content="Discover our new collection" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <meta name="twitter:card" content="#" />
   </head>
 
   <body>
@@ -23,8 +28,9 @@
         </li>
         <li>
           <a href="#"
-            >RSS <i class="fa fa-wifi"></i><span class="icon"></span
-          ></a>
+            >RSS &nbsp;
+            <i class="fa fa-rss"></i>
+          </a>
         </li>
       </ul>
     </nav>
@@ -34,12 +40,13 @@
       <aside id="topAside">View this email in your browser</aside>
 
       <!-- Secondary navigation (links) -->
-      <header>
+      <header class="secondaryNav">
         <nav>
           <img
             src="Images/Normaal Gigue logo.svg"
             alt="Gigue Logo"
             width="150px"
+            class="logo"
           />
           <ul>
             <li><a href="#">Shop Online</a></li>
@@ -51,9 +58,12 @@
 
       <!-- Section 1 -->
       <section class="section highlight">
-        <h1>- Discover our new collection</h1>
-        <h1>Now Live</h1>
-        <h2>Spring/Summer &lsquo;21</h2>
+        
+        <h1>Discover our<br />new collection</h1>
+        <header>
+          <h2>Now Live</h2>
+          <h3>Spring/Summer &lsquo;21</h3>
+        </header>
         <img
           src="Images/Sil012-55.jpg"
           alt="Spring Summer collection"
@@ -72,16 +82,20 @@
             collection transport you to wonderful, summery days filled with
             sunshine and vibrant colours. Feel that southern breeze?
           </p>
-          <button>Experience spring</button>
+          <a href="#"><button class="buttonOne">Experience spring</button></a>
         </article>
       </section>
 
       <!-- Section 3 -->
       <section class="section doubleColumn">
-        <div class="highlight">
-          <img src="Images/S21_LOOK_51_A.png" alt="Brightness" width="70%" />
+        <div class="highlightDouble">
+          <img
+            src="Images/S21_Look_51_A_cropped.jpg"
+            alt="Brightness"
+            width="70%"
+          />
         </div>
-        <article>
+        <article class="articleDouble">
           <header>
             <h1>Brightness</h1>
           </header>
@@ -90,13 +104,13 @@
             sumer outfit. Whether it's a wonderfully flowy dress or a feminine
             suit, an all-white outfit will always make you look radiant.
           </p>
-          <button>Discover more</button>
+          <a href="#"><button class="buttonTwo">Discover more</button></a>
         </article>
       </section>
 
       <!-- Section 4 -->
       <section class="section doubleColumn">
-        <article>
+        <article class="articleDouble">
           <header>
             <h1>A touch of lilac</h1>
           </header>
@@ -105,59 +119,89 @@
             statement pieces. Go for a unique patel look, reminiscent of vast
             lavender fields
           </p>
-          <button>Inspire me</button>
+          <a href="#"><button class="buttonTwo">Inspire me</button></a>
         </article>
-        <img src="Images/Sil008-751.png" alt="A touch of lilac" width="70%" />
+        <div class="highlightDoubleTwo">
+          <img
+            src="Images/Sil008-75_cropped.jpg"
+            alt="A touch of lilac"
+            width="70%"
+          />
+        </div>
       </section>
 
       <!-- Section 5 -->
       <section class="section highlight">
-        <p>New Collection</p>
-        <p>Spring/Summer &lsquo;21</p>
+        <!-- <p>New Collection</p>
+        <p>Spring/Summer &lsquo;21</p> -->
         <img
-          src="Images/Sil006-134 1.png"
+          src="Images/Sil006-134_cropped.jpg"
           alt="New collection Spring/Summer '21"
           width="43%"
           class="blockImage"
         />
-        <button>Lookbook</button>
+        <img
+          src="Images/balletjes (002).png"
+          alt="balletjes"
+          height="120rem"
+          class="balletjes"
+        />
+        <img
+          src="Images/circlelast1.png"
+          alt="New Collection Spring/Summer '21"
+          class="circle"
+        />
+
+        <a href="#"><button class="buttonOne">Lookbook</button></a>
       </section>
 
       <!-- Footer -->
       <footer>
         <h1>Get inspired</h1>
         <h3>Follow us on social media</h3>
-        <img src="Images/Group 23.png" alt="Facebook" width="50px" />
-        <img src="Images/GG test option 2 2.png" alt="Instagram" width="50px" />
+        <div class="socialMedia">
+          <img src="Images/facebook.jpg" alt="Facebook" width="100px" />
+          <img
+            src="Images/GG test option 2 2.png"
+            alt="Instagram"
+            width="100px"
+          />
+        </div>
         <hr />
-        <ul>
-          <li>Fast delivery</li>
-          <li>Free returns</li>
-          <li>Free delivery as of 2 items</li>
-        </ul>
+        <section class="delivery">
+          <ul>
+            <li>&#10003;&nbsp;Fast delivery</li>
+            <li>&#10003;</i>&nbsp;Free returns</li>
+            <li>
+              &#10003;&nbsp;Free delivery as of 2 items
+            </li>
+          </ul>
+        </section>
         <img
           class="blockImage"
-          src="Images/IKB.png"
+          src="Images/Logo Ik Koop Belgisch B2.jpg"
           alt="Ik koop Belgisch"
-          width="50px"
+          width="100px"
         />
-        <ul>
-          <li><a href="#">Shop Online</a></li>
-          <li><a href="#">Lookbook</a></li>
-          <li><a href="#">Store Locator</a></li>
-        </ul>
+        <section class="secondaryNavFooter">
+          <ul>
+            <li><a href="#">Shop Online</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><a href="#">Store Locator</a></li>
+          </ul>
+        </section>
         <footer>
           <p>
-            This email was sent to &lsaquo;&lsaquo;Email
-            Address&rsaquo;&rsaquo;<br />
+            This email was sent to &lt;&lt;Email Address&gt;&gt;<br />
             To ensure that our messages get to you (and don't go to your junk or
             bulk email folders).<br />
             Please add news@news.gigue.com to your address book.<br /><br />
             This email was sent from Gigue.com which is operated by Online
-            Heroes NV with offices in Belgium at Duboisstraat 50, 2060 Antwerp
-            (company registry number: RPR Brussels 0831.910.107 and VAT number:
-            BE831.910.107). To contact us, please click
-            <a href="#">here</a><br /><br />
+            Heroes NV with offices in Belgium 
+            at Duboisstraat 50, 2060 Antwerp (company registry
+            number: RPR Brussels 0831.910.107 and VAT number:
+            BE831.910.107). To contact us, please click <a href="#">here</a
+            ><br /><br />
             To unsubscribe, <a href="#">click here</a>
           </p>
         </footer>
@@ -165,4 +209,4 @@
     </main>
   </body>
 </html>
-<!-- © 2021 GitHub, Inc. -->
+<!-- © Ezgi Hendrickx -->

@@ -1,5 +1,60 @@
 @charset "UTF-8";
 /* CSS Document */
+/* Custom Font Family */
+/* Note: to be fully compatible on all browsers and devices, additional font file types should be added, not only .ttf */
+
+@font-face {
+  font-family: josefinSans-Bold;
+  src: url(fonts/josefinSans/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: josefinSans-BoldItalic;
+  src: url(fonts/josefinSans/JosefinSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: josefinSans-Italic;
+  src: url(fonts/josefinSans/JosefinSans-Italic.ttf);
+}
+@font-face {
+  font-family: josefinSans-Light;
+  src: url(fonts/josefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: josefinSans-LightItalic;
+  src: url(fonts/josefinSans/JosefinSans-LightItalic.ttf);
+}
+@font-face {
+  font-family: josefinSans-Regular;
+  src: url(fonts/josefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: josefinSans-SemiBold;
+  src: url(fonts/josefinSans/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: josefinSans-SemiBoldItalic;
+  src: url(fonts/josefinSans/JosefinSans-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: josefinSans-Thin;
+  src: url(fonts/josefinSans/JosefinSans-Thin.ttf);
+}
+@font-face {
+  font-family: josefinSans-ThinItalic;
+  src: url(fonts/josefinSans/JosefinSans-ThinItalic.ttf);
+}
+
+@font-face {
+  font-family: bauerBodoni-LT-Roman;
+  src: url(fonts/bauerBodoni/BauerBodoni-Roman.otf);
+}
+
+@font-face {
+  font-family: bauerBodoni-LT-Italic;
+  src: url(fonts/bauerBodoni/BaueBodoni-Italic.otf);
+}
+
+
 /* Zero out margins, padding & borders */
 html,
 body {
@@ -32,100 +87,310 @@ body {
   max-width: 900px;
 }
 
-/* .container {
-		display: grid;
-		grid-column-gap: 10px;
-		grid-template-columns: 20% 50% 29%;
-} */
-
 a {
-    text-decoration: none;
-  }
-  
+  text-decoration: none;
+  color: black;
+}
 
 /* Navigation */
 nav {
   width: 100%;
-  background-color: aquamarine;
   padding: 0px;
-
 }
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: inline-block;
-
 }
 nav li {
   display: inline;
-  padding: 10px;
+  padding: 5px 15px 5px 15px;
+  white-space: nowrap;
 }
-.mainNav{
-    display:grid;
-    grid-template-columns: auto auto 1fr auto auto;
-    box-shadow:0px 2px 2px red;
-    margin-bottom: 4px;
+
+.mainNav {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  box-shadow: 0px 2px 2px #cccccc;
+  margin-bottom: 4px;
+  font-family: calibri;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: #f5f5f5;
+  /* Smartphone responsiveness to be improved. Ideally to change to hamburger menu for smaller screens */
 }
-.mainNav li{
-    border-right-style:solid;
-    border-right-width: 1px;
-    border-right-color:red;
+.mainNav li {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #cccccc;
 }
-/* .icon{
-    background: url('your-image-url.jpg');
-    height: 100%;
-    display: inline;
-} */
+/*To change: make complete block clickable; not only text*/
+/*To change: find correct icon for connection signal*/
+.icon {
+  background: url("Images/rss.png");
+  height: 100%;
+  display: inline;
+}
+.rss {
+  display: inline-block;
+}
 
 /* Main Newsletter (excluding top nav)*/
 main {
   max-width: 600px; /* 600px nexsletter + 300px whitespace */
+  min-width: 300px; /* mobile responsiveness for very small width smartphones to be improved */
   margin: 0 auto;
 }
 
 /* Top Aside info */
 #topAside {
-  background-color: bisque;
+  font-family: calibri;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Secondary Navigation */
+.secondaryNav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: calibri;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+@media (max-width: 550px) {
+  .secondaryNav ul {
+    display: block;
+  }
+  .secondaryNav li {
+    display: block;
+  }
+}
+
+.logo {
   vertical-align: middle;
+  padding: 5px 10px 5px 15px;
+}
+.secondaryNav nav {
+  padding: 0px;
+}
+.secondaryNav li {
+  padding: 3rem;
 }
 
 /* Newsletter sections */
-.section {
-}
+/* Section 1 */
 .highlight {
-  background-color: burlywood;
+  background-color: #e3d6c9;
+  padding: 13% 0% 13% 0%;
+  color: white;
+  position: relative;
+}
+.highlight h1 {
+  text-transform: uppercase;
+  font-family: bauerBodoni-LT-Roman;
+  letter-spacing: 1rem;
+  position: absolute;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  text-align: left;
+  top: 45%;
+  left: -15%;
+  line-height: 130%;
+  /* Note:extra work required to make fully responsive! */
 }
 
+.highlight header {
+  position: absolute;
+  left: 45%;
+  text-align: left;
+  z-index: 100;
+  font-size: 100%;
+}
+.highlight h2 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-family: josefinSans-Light;
+  letter-spacing: 0.5rem;
+}
+.highlight h3 {
+  margin-top: 0;
+ font-family: bauerBodoni-LT-Italic;
+  letter-spacing: 0.8rem;
+}
+@media (max-width: 550px) {
+  /* Exact breakpoint to be finetuned */
+  .highlight h1 {
+    font-size: 80%;
+    left: -7rem;
+  }
+  .highlight header {
+    left: 30%;
+    font-size: 70%;
+  }
+}
+
+/* Section 2 */
+.section p {
+  font-family: josefinSans-Regular;
+  line-height: 2rem;
+  color: #d1bba0;
+}
+.singleColumn h1,
+.doubleColumn h1 {
+  font-family: bauerBodoni-LT-Roman;
+  font-weight: normal;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #C7B19B;
+}
+.section button {
+  font-family: calibri;
+}
 .section.singleColumn {
-  background-color: cadetblue;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 16.667% 20px 16.667%;
+}
+.singleColumn p {
+  margin: 0;
 }
 
+.buttonOne {
+  color: white;
+  background-color: #d1bba0;
+  padding: 10px;
+  margin-top: 15px;
+  width: 14rem;
+  border: none;
+}
+.buttonTwo {
+  background-color: white;
+  border-width: 1px;
+  padding: 7px;
+  bottom: 3px;
+  text-decoration: underline;
+  color: #d1bba0;
+  border-color: #d1bba0;
+  border-style: solid;
+}
+
+/* Section 3,4 */
 .section.doubleColumn {
-  background-color: cornsilk;
+  margin: 40px 4% 60px 4%;
+}
+@media (min-width: 550px) {
+  /* Exact breakpoint to be finetuned */
+  .section.doubleColumn {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 40px 4% 60px 4%;
+  }
 }
 
-.blockImage {
-  display: block;
-  margin: 0 auto;
+.highlightDouble {
+  background-color: #c7b09c;
+  padding: 10% 0% 10% 0;
+  margin: 0 9% 0 9%;
+}
+.highlightDoubleTwo {
+  background-color: #e3d6c9;
+  padding: 10% 0% 10% 0;
+  margin: 0 9% 0 9%;
+}
+.articleDouble {
+  text-align: left;
+  padding: 3px 15% 0px 7%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.articleDouble h1 {
+  margin-top: 0;
 }
 
-hr {
-  width: 20%;
-  color: black;
+/* Section 5 */
+.highlight p {
+  position: absolute;
+  color: white;
+}
+.balletjes {
+  position: absolute;
+  top: 35%;
+  left: 17%;
+}
+.circle {
+  position: absolute;
+  top: -10%;
+  right: -25%; /* improve responsiveness */
+  height: 75%;
 }
 
 /* Footer */
+footer h1 {
+  margin: 0;
+  color: #C7B19B;
+  font-family: bauerBodoni-LT-Roman;
+}
+footer h3 {
+  margin: 0;
+  color: #C7B19B;
+  font-family: bauerBodoni-LT-Italic;
+  font-size: small;
+}
+.socialMedia {
+  margin: 10px 0px 30px 0px;
+}
+.socialMedia img {
+  margin: 0px 10px 0px 10px;
+}
+hr {
+  width: 30%;
+  height: 0px;
+  border: 0.3px solid black; 
+  border-radius: 5px 5px 5px 5px;
+}
 footer {
-  background-color: darkgrey;
+  padding: 60px 10% 20px 10%;
 }
-
-footer ul {
+.delivery ul {
+  display: inline;
+}
+.delivery {
+  margin: 20px 0 0 0;
+  font-family: bauerBodoni-Italic;
+  font-size: 1.3rem;
+}
+.delivery li {
+  display: inline;
+  padding: 5px;
+}
+.blockImage {
+  display: block;
+  margin: 40px auto;
+  position: relative;
+}
+.secondaryNavFooter ul {
   list-style: none;
-  display: inline;
+  text-transform: uppercase;
+  padding: 0; /*remove space left by bullet points*/
+  font-size: 1.2rem;
+  font-family: calibri;
 }
-
-footer li {
-  display: inline;
+.secondaryNavFooter li {
+  padding: 7px;
+  margin: 0;
 }
-
+footer footer {
+  color: #cccccc;
+  font-family: calibri;
+  font-size: 1rem;
+  padding: 5%;
+}
+footer footer a {
+  color: #cccccc;
+  font-weight: bold;
+}
